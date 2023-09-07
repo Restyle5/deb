@@ -1,14 +1,57 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DEB</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/basic.css">
 </head>
+
 <body>
 
-    <header> Header goes here</header> 
+    <header>
+        <nav>
+
+        </nav>
+    </header>
     <main>
-        
+        <section class="startup">
+            <div class="main-mask" id="mask">
+            </div>
+
+
+            <section class="absolute-center drop-animation" id="animated-element">
+                <div class="border-circle toggle-unmask m-auto" id="trigger-button">
+                    <img src="./images/profile-pic.jpg" alt="profile picture">
+                </div>
+                <span class="text-center title m-auto d-block mt-20">
+                    William Dal E
+                </span>
+            </section>
+
+
+        </section>
+        <section class="content">
+        </section>
     </main>
 </body>
+
+<script>
+    const animatedElement = document.getElementById('animated-element');
+    const mask = document.getElementById('mask');
+    const triggerButton = document.getElementById('trigger-button');
+    let isIntroOut = false;
+
+    triggerButton.addEventListener('click', function () {
+
+        if (!isIntroOut) {
+            console.log("did you clicked me ?");
+            animatedElement.classList.add('intro-out');
+            mask.classList.add('cease-out');
+            isIntroOut = true;
+        }
+    });
+</script>
+
 </html>
